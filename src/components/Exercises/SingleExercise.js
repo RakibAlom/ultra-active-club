@@ -4,7 +4,7 @@ const SingleExercise = (props) => {
   const { exercise, handlerAddToList } = props;
   const { name, ages, times, details, img } = exercise;
   return (
-    <div className="col-lg-4 col-md-6 col-12 mb-4">
+    <div className="col-xl-4 col-lg-6 col-12 mb-4">
       <div className="single-excersie">
         <div className="card border-0 rounded-4 p-4 shadow-sm">
           <div className="card-body border-0 p-0">

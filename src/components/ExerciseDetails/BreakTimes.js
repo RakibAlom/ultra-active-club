@@ -6,10 +6,10 @@ const BreakTimes = (props) => {
   return (
     <div>
       <h4 className='pb-2'>Add A Break</h4>
-      <div className='break-points py-3 py-md-3 px-5 px-md-2 px-md-3 rounded-3 d-flex justify-content-between'>
+      <div className='break-points py-3 py-md-3 px-3 px-md-2 px-md-3 rounded-3 d-flex justify-content-between'>
         {
           breakTimes.map(time =>
-            <div className="break-single-point rounded-5 p-1 p-md-2" key={time}>
+            <div className="break-single-point rounded-5" key={time}>
               <span onClick={() => handleBreakTimes(time)}>{time}s</span>
             </div>
           )

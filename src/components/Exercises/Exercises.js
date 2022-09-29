@@ -4,6 +4,7 @@ import SingleExercise from './SingleExercise';
 import './Exercises.css'
 import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import Sidebar from '../Sidebar/Sidebar';
+import Blogs from '../Blogs/Blogs';
 
 const Exercises = () => {
   const [exercises, setExercises] = useState([]);
@@ -32,13 +33,12 @@ const Exercises = () => {
 
   return (
     <div className="row m-0 flex-column-reverse flex-md-row">
-      <div className='col-lg-9 col-md-8 p-md-3 p-lg-5'>
+      <div className='col-xl-9 col-lg-8 p-md-3 col-md-7 p-lg-5'>
         <div className='exercise-container'>
-
           <div className='d-none d-md-block'>
             <Header></Header>
           </div>
-          <h4 className='pb-4'>Select today's exercise</h4>
+          <h4 className='pb-4 fw-semibold'>Select today's exercise</h4>
           <div className='row'>
             {
               exercises.map(exercise => <SingleExercise key={exercise.id} exercise={exercise} handlerAddToList={handlerAddToList}></SingleExercise>)
@@ -47,12 +47,18 @@ const Exercises = () => {
           <div className="d-none">
             <ExerciseDetails exerciseTimes={exerciseTimes}></ExerciseDetails>
           </div>
-
         </div>
+
+        <div className="blog-container">
+          <Blogs></Blogs>
+        </div>
+
       </div>
-      <div className='col-lg-3 col-md-4 my-4 my-md-0'>
+
+      <div className='col-xl-3 col-lg-4 col-md-5 my-4 my-md-0'>
         <Sidebar exerciseTimes={exerciseTimes}></Sidebar>
       </div>
+
     </div>
 
   );

@@ -6,4 +6,13 @@ body {
   box-sizing: border-box;
   background: #F2F4FA;
   font-family: 'Merriweather', serif;
+  scroll-behavior: smooth;
+}
+
+.main-color {
+  color: #5D5FEF;
+}
+
+.main-bg-color {
+  background-color: #5D5FEF;
 }

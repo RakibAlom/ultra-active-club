@@ -6,7 +6,7 @@
 }
 
 .navbar-brand,
-.nav-link {
+.nav-link:hover {
   color: #5D5FEF;
 }
 

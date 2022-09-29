@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import BreakTimes from './BreakTimes';
 import './ExerciseDetails.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ExerciseDetails = (props) => {
   const { exerciseTimes } = props;
@@ -19,6 +21,8 @@ const ExerciseDetails = (props) => {
     }
   }, [breakTimes]);
 
+  const notify = () => toast("Congratulations, Your Activity Completed!");
+
   return (
     <div>
       <BreakTimes handleBreakTimes={handleBreakTimes}></BreakTimes>
@@ -32,7 +36,10 @@ const ExerciseDetails = (props) => {
           <span className='fw-semibold'>Break time</span>
           <span className='text-secondary'>{breakTimes} seconds</span>
         </div>
-        <button className='btn btn-lg activity-btn w-100 mt-3'>Activity Completed</button>
+
+        <button onClick={notify} className='btn btn-lg activity-btn w-100 mt-3'>Activity Completed</button>
+        <ToastContainer />
+
       </div>
     </div>
   );

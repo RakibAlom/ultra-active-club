@@ -32,9 +32,9 @@ const Exercises = () => {
   }, [exerciseTimes]);
 
   return (
-    <div className="row m-0 flex-column-reverse flex-md-row">
+    <div className="row flex-column-reverse flex-md-row mx-0">
       <div className='col-xl-9 col-lg-8 p-md-3 col-md-7 p-lg-5'>
-        <div className='exercise-container'>
+        <div className='exercise-container p-xl-4'>
           <div className='d-none d-md-block'>
             <Header></Header>
           </div>
@@ -55,7 +55,7 @@ const Exercises = () => {
 
       </div>
 
-      <div className='col-xl-3 col-lg-4 col-md-5 my-4 my-md-0'>
+      <div className='col-xl-3 col-lg-4 col-md-5 py-4 py-md-0'>
         <Sidebar exerciseTimes={exerciseTimes}></Sidebar>
       </div>
 

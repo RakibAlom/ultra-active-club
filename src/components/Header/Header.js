@@ -5,7 +5,6 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg mb-4">
         <a className="navbar-brand" href="/">
-          {/* <img src="" alt="Bootstrap" /> */}
           Kingdom-of-Fantasy-Gym
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

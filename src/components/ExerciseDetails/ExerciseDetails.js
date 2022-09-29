@@ -5,6 +5,8 @@ import './ExerciseDetails.css';
 const ExerciseDetails = (props) => {
   const { exerciseTimes } = props;
   const [breakTimes, setBreakTimes] = useState(0);
+  const [abc, setAbc] = useState(0);
+  console.log(exerciseTimes);
   const handleBreakTimes = (newBreakTimes) => {
     setBreakTimes(newBreakTimes);
     localStorage.setItem('break-times', JSON.stringify(newBreakTimes));
@@ -19,6 +21,10 @@ const ExerciseDetails = (props) => {
     }
   }, [breakTimes]);
 
+  useEffect(() => {
+    setAbc(exerciseTimes);
+  }, []);
+
 
   return (
     <div>
@@ -27,7 +33,7 @@ const ExerciseDetails = (props) => {
         <h4 className='pt-5 pb-2'>Exercise Details</h4>
         <div className="exercise-single-details d-flex justify-content-between mb-4 py-3 px-3 rounded-3">
           <span className='fw-semibold'>Exercise time</span>
-          <span className='text-secondary'> {exerciseTimes} seconds</span>
+          <span className='text-secondary'> {abc} seconds</span>
         </div>
         <div className="exercise-single-details d-flex justify-content-between mb-4 py-3 px-3 rounded-3">
           <span className='fw-semibold'>Break time</span>

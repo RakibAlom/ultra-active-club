@@ -7,22 +7,23 @@ import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 const Exercises = () => {
   const [exercises, setExercises] = useState([]);
   const [exerciseTimes, setExerciseTimes] = useState(0);
-  const [buttonActive, setButtonActive] = useState(false);
+  // const [buttonActive, setButtonActive] = useState(false);
   useEffect(() => {
     fetch('./database.json')
       .then(res => res.json())
       .then(data => setExercises(data));
   }, [])
 
-  const handlerAddToList = (product) => {
-    const newTimes = exerciseTimes + parseFloat(product.times);
+  const handlerAddToList = (exercise) => {
+    const newTimes = exerciseTimes + parseFloat(exercise.times);
+    // console.log(newTimes)
     setExerciseTimes(newTimes);
   }
 
   useEffect(() => {
     const newExerciseTimes = exerciseTimes
     setExerciseTimes(newExerciseTimes);
-    console.log(newExerciseTimes)
+    // console.log(newExerciseTimes)
   }, [exerciseTimes]);
 
   return (

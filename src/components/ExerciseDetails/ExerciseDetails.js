@@ -14,6 +14,7 @@ const ExerciseDetails = (props) => {
     setBreakTimes(breakTime)
   }, [breakTimes]);
 
+
   return (
     <div>
       <BreakTimes handleBreakTimes={handleBreakTimes}></BreakTimes>

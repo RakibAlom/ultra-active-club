@@ -4,14 +4,19 @@ import './ExerciseDetails.css';
 
 const ExerciseDetails = (props) => {
   const { exerciseTimes } = props;
-  const [breakTimes, setBreakTimes] = useState(20);
+  const [breakTimes, setBreakTimes] = useState(0);
   const handleBreakTimes = (newBreakTimes) => {
     setBreakTimes(newBreakTimes);
-    localStorage.setItem('break-times', JSON.parse(newBreakTimes));
+    localStorage.setItem('break-times', JSON.stringify(newBreakTimes));
   }
   useEffect(() => {
-    const breakTime = breakTimes;
-    setBreakTimes(breakTime)
+    let breakTime = JSON.parse(localStorage.getItem('break-times'));
+    if (breakTime) {
+      setBreakTimes(breakTime)
+    } else {
+      breakTime = breakTimes;
+      setBreakTimes(breakTime)
+    }
   }, [breakTimes]);
 
 

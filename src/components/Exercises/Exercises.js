@@ -7,6 +7,7 @@ import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 const Exercises = () => {
   const [exercises, setExercises] = useState([]);
   const [exerciseTimes, setExerciseTimes] = useState(0);
+  const [buttonActive, setButtonActive] = useState(false);
   useEffect(() => {
     fetch('./database.json')
       .then(res => res.json())

@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: #F2F4FA;
+  font-family: 'Merriweather', serif;
 }

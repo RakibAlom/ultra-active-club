@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import SingleExercise from './SingleExercise';
 import './Exercises.css'
-import { parse } from '@fortawesome/fontawesome-svg-core';
+import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 
 const Exercises = () => {
   const [exercises, setExercises] = useState([]);
@@ -30,6 +30,9 @@ const Exercises = () => {
         {
           exercises.map(exercise => <SingleExercise key={exercise.id} exercise={exercise} handlerAddToList={handlerAddToList}></SingleExercise>)
         }
+      </div>
+      <div className="d-none">
+        <ExerciseDetails exerciseTimes={exerciseTimes}></ExerciseDetails>
       </div>
 
     </div>

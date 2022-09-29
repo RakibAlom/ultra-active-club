@@ -14,10 +14,16 @@ const Exercises = () => {
   }, [])
 
   const handlerAddToList = (product) => {
-    const newTimes = exerciseTimes + parseInt(product.times);
-    console.log(newTimes);
+    const newTimes = exerciseTimes + parseFloat(product.times);
+    // console.log(newTimes);
     setExerciseTimes(newTimes);
   }
+
+  useEffect(() => {
+    const newExerciseTimes = exerciseTimes
+    setExerciseTimes(newExerciseTimes);
+    console.log(newExerciseTimes)
+  }, [exerciseTimes]);
 
   return (
     <div className='exercise-container'>

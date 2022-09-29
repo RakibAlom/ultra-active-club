@@ -1,0 +1,31 @@
+.single-excersie .card-body {
+  min-height: 480px;
+}
+
+.btn-add-list {
+  background-color: #5D5FEF;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+}
+
+.btn-add-list:hover {
+  background-color: #4f52fa !important;
+  color: #fff !important;
+}
+
+.btn-add-list.active {
+  background-color: #27AE60;
+  color: #fff;
+}
+
+.btn-add-list.active:hover {
+  background-color: #19c962 !important;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .single-excersie .card-body {
+    min-height: 400px;
+  }
+}

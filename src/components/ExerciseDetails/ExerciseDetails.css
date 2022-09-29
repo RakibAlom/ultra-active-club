@@ -1,0 +1,29 @@
+.break-points {
+  background-color: #F2F4FA;
+}
+
+.break-single-point {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.break-single-point.active,
+.break-single-point:hover {
+  color: #fff;
+  background-color: #5D5FEF;
+}
+
+.exercise-single-details {
+  background-color: #F2F4FA;
+}
+
+.activity-btn {
+  color: #fff;
+  background-color: #5D5FEF;
+  transition: 0.1s;
+}
+
+.activity-btn:hover {
+  color: #fff !important;
+  background-color: #4f52fa !important;
+}

@@ -15,7 +15,6 @@ const Exercises = () => {
 
   const handlerAddToList = (product) => {
     const newTimes = exerciseTimes + parseFloat(product.times);
-    // console.log(newTimes);
     setExerciseTimes(newTimes);
   }
 

@@ -7,11 +7,13 @@ const ExerciseDetails = (props) => {
   const [breakTimes, setBreakTimes] = useState(20);
   const handleBreakTimes = (newBreakTimes) => {
     setBreakTimes(newBreakTimes);
+    localStorage.setItem('break-times', JSON.parse(newBreakTimes));
   }
   useEffect(() => {
     const breakTime = breakTimes;
     setBreakTimes(breakTime)
-  }, []);
+  }, [breakTimes]);
+
   return (
     <div>
       <BreakTimes handleBreakTimes={handleBreakTimes}></BreakTimes>

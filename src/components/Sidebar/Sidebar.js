@@ -3,11 +3,12 @@ import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 import User from '../User/User';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+  const { exerciseTimes } = props;
   return (
     <div className='sidebar-container bg-white h-100 p-4'>
       <User></User>
-      <ExerciseDetails></ExerciseDetails>
+      <ExerciseDetails exerciseTimes={exerciseTimes}></ExerciseDetails>
     </div>
   );
 };

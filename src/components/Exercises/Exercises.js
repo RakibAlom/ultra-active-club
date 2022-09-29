@@ -21,6 +21,7 @@ const Exercises = () => {
 
   return (
     <div className='exercise-container'>
+
       <div className='d-none d-md-block'>
         <Header></Header>
       </div>
@@ -29,8 +30,8 @@ const Exercises = () => {
         {
           exercises.map(exercise => <SingleExercise key={exercise.id} exercise={exercise} handlerAddToList={handlerAddToList}></SingleExercise>)
         }
-
       </div>
+
     </div>
   );
 };
